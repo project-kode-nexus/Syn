@@ -35,10 +35,10 @@ PVCpu (Pheonix Virtual CPU) Instruction Set Architecture
 
 **Control and Stack Registers:**  
 
-\- **PC:** Program Counter (Internal)  
+\- **PC:** Program Counter (Internal, tho can't be accessed with even maximum privilages)  
 \- **LR:** Link Register (Return addresses)  
-\- **SF:** Stack Frame Register  
-\- **SP:** Stack Pointer
+\- **SF:** Stack Frame Register
+\- **SP:** Stack Pointer (Starts at 0xFFFF)
 
 **Internal and System Registers:**  
 

@@ -125,7 +125,7 @@ class PVCpuRegfile {
 		}
 		$this->registers['lr'] = 0;
 		$this->registers['sf'] = 0;
-		$this->registers['sp'] = 0;
+		$this->registers['sp'] = 0xFFFF;
 	}
 
 	public function __construct() {
@@ -137,10 +137,11 @@ class PVCpuIState {
 	// IState Reg file <array[str, int]>
 	private array $registers = [];
 	private const array REGFILE_MAP = [
-		1 => "i0",
-		2 => "i1",
-		3 => "i2",
-		4 => "tr",
+		// 35 is PC, aka not allowed for access
+		36 => "i0",
+		37 => "i1",
+		38 => "i2",
+		39 => "tr",
 	];
 
 	// Returns if register exists
